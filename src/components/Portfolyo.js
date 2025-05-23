@@ -12,7 +12,7 @@ const projects = [
     {
         title: 'Portföy Sitesi',
         description: 'React ile oluşturulmuş kişisel portföy web sitesi.',
-        github: 'https://github.com/sena-arikan/proje',
+        github: 'https://github.com/_sena-arikan/proje',
     },
     {
         title: 'Soru Bankası',
