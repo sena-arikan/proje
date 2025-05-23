@@ -1,120 +1,117 @@
 import React from 'react';
-import { FaGlobe, FaMobileAlt, FaDatabase, FaBrain } from 'react-icons/fa';
+import './Portfolyo.css';
+import { FaGithub } from 'react-icons/fa';
 
-function NelerYapabilirim() {
-    const skills = [
-        {
-            title: "Yazılım",
-            description: "JavaScript, Java, C# ve Python dillerinde projeler geliştirebilirim, daha fazla yazılım dili öğrenmek ve şu an bildiklerimi geliştirmek için çaba gösteriyorum.",
-            icon: <FaGlobe size={40} color="#fff" />
-        },
-        {
-            title: "Web Tasarım",
-            description: "HTML ve CSS'i verimli kullanabilir ve çeşitli tasarım, proje ve sayfalar yapabilirim.",
-            icon: <FaMobileAlt size={40} color="#fff" />
-        },
-        {
-            title: "Veritabanı Yönetimi",
-            description: "React, Pandas gibi kütüphaneleri ve SQLite, MySQL gibi veritabanlarını verimli kullanabilirim.",
-            icon: <FaDatabase size={40} color="#fff" />
-        },
-        {
-            title: "Veri Bilimi",
-            description: "Veri bilimi ve yapay zekaya ilgiliyim, çeşitli eğitim ve sertifikalar alma üzerinde çalışıyorum.",
-            icon: <FaBrain size={40} color="#fff" />
-        },
-    ];
 
+const projects = [
+    {
+        title: 'Günlük Uygulaması',
+        description: 'PyQt5 ile geliştirilen çok pencereli görev uygulaması.',
+        github: 'https://github.com/sena-arikan/To-Do-List',
+    },
+    {
+        title: 'Portföy Sitesi',
+        description: 'React ile oluşturulmuş kişisel portföy web sitesi.',
+        github: 'https://github.com/_sena-arikan/proje',
+    },
+    {
+        title: 'Soru Bankası',
+        description: 'Python & SQL kullanarak dijital bir soru bankası sistemi.',
+        github: 'https://github.com/sena-arikan/soru_bankasi',
+    },
+    {
+        title: 'Kişilik Testi',
+        description: 'Eğlenceli bir kişilik testi sitesi.',
+        github: 'https://github.com/sena-arikan/kisilik_testi',
+    },
+
+];
+
+const Portfolyo = () => {
     return (
-        <div style={{
-            backgroundImage: "url('/sayfa.jpg')",
-            backgroundColor: '#C8A2C8',
-            minHeight: '100vh',
-            padding: '3rem 1rem',
-            color: 'purple',
-            boxSizing: 'border-box',
-        }}>
-            <h1 className="page-title">Neler Yapabilirim?</h1>
-            <p className="page-subtitle">
-                Yazılım ve teknoloji alanında sahip olduğum beceriler:
-            </p>
-            <div className="skills-container">
-                {skills.map(({ title, description, icon }, index) => (
-                    <div
-                        key={index}
-                        className="skill-card"
-                        onMouseEnter={e => {
-                            e.currentTarget.style.transform = 'scale(1.05)';
-                            e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.4)';
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.transform = 'scale(1)';
-                            e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.3)';
-                        }}
-                    >
-                        <div>{icon}</div>
-                        <h3>{title}</h3>
-                        <p>{description}</p>
+
+        <div className="projects-container"
+
+             style={{
+                 backgroundImage: "url('/sayfa2.jpg')",
+                 WebkitBackdropFilter: 'blur(10px)',
+                 backgroundSize: "cover",
+                 backgroundPosition: "center",
+                 backgroundRepeat: "no-repeat",
+                 minHeight: "100vh",
+                 padding: "3rem 2rem",
+                 color: "white"
+             }}>
+            <h1 className="projects-title">PORTFOLYO</h1>
+            <div className="projects-grid">
+                {projects.map((proj, index) => (
+                    <div key={index} className="project-card">
+                        <h2>{proj.title}</h2>
+                        <p>{proj.description}</p>
+                        <a href={proj.github} target="_blank" rel="noopener noreferrer" className="github-button">
+                            <FaGithub style={{ marginRight: '8px' }} />
+                            GitHub
+                        </a>
                     </div>
                 ))}
             </div>
-
             <style>{`
-                .page-title {
-                    font-size: 3rem;
-                    margin-bottom: 1rem;
+            
+                .projects-title {
                     text-align: center;
+                    font-size: 4rem;
+                    margin-top: 3rem;
+                    margin-bottom: 10rem;
+                    color: #663399;
                 }
-                .page-subtitle {
-                    font-size: 1.4rem;
-                    max-width: 600px;
-                    margin: 0 auto 3rem auto;
-                    text-align: center;
+
+                .projects-grid {
+                    display: grid;
+                    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+                    column-gap: 0.5rem; 
+                    gap: 0.5rem;     
+                    padding: 0.5rem;
+                    justify-items: center;
                 }
-                .skills-container {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 1.5rem;
-                    justify-content: center;
-                }
-                .skill-card {
-                    background-color: #A67FBF;
+
+                .project-card {
+                    
                     border-radius: 12px;
                     padding: 1.5rem;
-                    width: 260px;
-                    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    width: 360px;
                     text-align: center;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                    cursor: pointer;
-                }
-                .skill-card h3 {
-                    margin-top: 1rem;
-                    margin-bottom: 0.7rem;
-                }
-                .skill-card p {
-                    font-size: 1rem;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s;
                 }
 
-                /* Responsive adjustments */
+                .project-card:hover {
+                    transform: translateY(-5px);
+                }
+
+                .github-button {
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #fff;
+                    
+                    padding: 0.5rem 1rem;
+                    border-radius: 8px;
+                    margin-top: 1rem;
+                    
+                }
+
+                .github-button:hover {
+                    
+                }
+
                 @media (max-width: 768px) {
-                    .page-title {
-                        font-size: 2rem;
-                    }
-                    .page-subtitle {
-                        font-size: 1.1rem;
-                        padding: 0 1rem;
-                    }
-                    .skill-card {
-                        width: 90%;
-                        max-width: 320px;
+                    .projects-grid {
+                        grid-template-columns: 1fr;
                     }
                 }
             `}</style>
         </div>
     );
-}
+};
 
-export default NelerYapabilirim;
+export default Portfolyo;
