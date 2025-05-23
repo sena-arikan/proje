@@ -31,19 +31,88 @@ function BenKimim() {
             </div>
 
             <style>{`
+                .fancy-title {
+                    font-size: 4rem;
+                    font-weight: 900;
+                    color: white;
+                    position: absolute;
+                    top: 3%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                }
+
+                .home-link {
+                    position: absolute;
+                    top: 11%;
+                    right: 5%;
+                    font-size: 1.3rem;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                .profile-image {
+                    position: relative;
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 7rem;
+                    width: 90%;
+                    max-width: 400px;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    border: 3px solid white;
+                    z-index: 2;
+                }
+
+                .text-container {
+                    margin: 2rem auto;
+                    margin-top: 2.5rem;
+                    color: white;
+                    font-size: 1.1rem;
+                    width: 90%;
+                    max-width: 700px;
+                    text-align: center;
+                }
+
+                /* Animasyonlar */
                 .title-animate {
                     animation: slideGrowTitle 2s ease forwards;
                 }
+
                 .image-animate {
                     animation: slideGrowImage 2s ease 0.5s forwards;
                 }
+
                 @keyframes slideGrowTitle {
                     0% { transform: translateX(-100%) scale(0.5); opacity: 0; }
-                    100% { transform: translateX(0) scale(1); opacity: 1; }
+                    100% { transform: translateX(-50%) scale(1); opacity: 1; }
                 }
+
                 @keyframes slideGrowImage {
                     0% { transform: translateX(-100%) scale(0.5); opacity: 0; }
                     100% { transform: translateX(0) scale(1); opacity: 1; }
+                }
+
+                /* Mobil uyumluluk */
+                @media (max-width: 768px) {
+                    .fancy-title {
+                        font-size: 2.2rem;
+                        top: 2%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    .home-link {
+                        top: 8%;
+                        right: 4%;
+                        font-size: 1rem;
+                    }
+
+                    .text-container {
+                        font-size: 1rem;
+                        margin-top: 2rem;
+                    }
                 }
             `}</style>
         </div>
