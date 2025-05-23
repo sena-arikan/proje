@@ -103,7 +103,7 @@ function Home() {
                         style={{ backgroundImage: "url('/github-preview.png')" }}
                     ></div>
                 </a>
-                <a href="ttps://www.instagram.com/sena_arikan?igsh=NXU4cmJ1eHZveHZz&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/_sena_arikan?igsh=NXU4cmJ1eHZveHZz&utm_source=qr" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-instagram" style={{color:'white'} }></i>
                     <div
                         className="preview-box"
