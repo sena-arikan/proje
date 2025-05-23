@@ -110,7 +110,7 @@ function Home() {
                         style={{ backgroundImage: "url('/instagram-preview.png')" }}
                     ></div>
                 </a>
-                <a href="https://www.linkedin.com/in/sena-arikan-aa7194339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/_sena_arikan_aa7194339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-linkedin" style={{color:'white'} }></i>
                     <div
                         className="preview-box"
