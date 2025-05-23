@@ -118,42 +118,7 @@ function Home() {
                     ></div>
                 </a>
             </div>
-            <style>
-                {`
-      @media (max-width: 768px) {
-        .fancy-title {
-          font-size: 2rem !important;
-          margin-top: 1rem !important;
-        }
 
-        .fade-in-scale {
-          font-size: 1.2rem !important;
-          margin-top: 1rem !important;
-          padding: 0 1rem;
-          text-align: center;
-        }
-
-        .menu-link {
-          font-size: 1.2rem !important;
-        }
-
-        .social-icons {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          align-items: center;
-        }
-
-        .social-icons i {
-          font-size: 1.5rem !important;
-        }
-
-        .preview-box {
-          display: none;
-        }
-      }
-    `}
-            </style>
         </div>
     );
 }
